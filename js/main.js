@@ -67,7 +67,7 @@ DIEGO.PortfolioHome = function(){
           $(settings.formMessages).addClass('success');
 
           // Set the message text.
-          $(settings.formMessages).text(response);
+          $(settings.formMessages).html(response);
 
           // Clear the form.
           $('#name').val('');
