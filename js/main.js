@@ -63,11 +63,11 @@ DIEGO.PortfolioHome = function(){
         })
         .done(function(response){
           // Make sure that the formMessages div has the 'success' class.
-          $(formMessages).removeClass('error');
-          $(formMessages).addClass('success');
+          $(settings.formMessages).removeClass('error');
+          $(settings.formMessages).addClass('success');
 
           // Set the message text.
-          $(formMessages).text(response);
+          $(settings.formMessages).text(response);
 
           // Clear the form.
           $('#name').val('');
@@ -76,14 +76,14 @@ DIEGO.PortfolioHome = function(){
       })
       .fail(function(data) {
           // Make sure that the formMessages div has the 'error' class.
-          $(formMessages).removeClass('success');
-          $(formMessages).addClass('error');
+          $(settings.formMessages).removeClass('success');
+          $(settings.formMessages).addClass('error');
 
           // Set the message text.
           if (data.responseText !== '') {
-              $(formMessages).text(data.responseText);
+              $(settings.formMessages).text(data.responseText);
           } else {
-              $(formMessages).text('Oops! An error occured and your message could not be sent.');
+              $(settings.formMessages).text('Oops! An error occured and your message could not be sent.');
           }
       });
     },
