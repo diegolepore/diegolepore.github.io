@@ -81,9 +81,9 @@ DIEGO.PortfolioHome = function(){
 
           // Set the message text.
           if (data.responseText !== '') {
-              $(settings.formMessages).text(data.responseText);
+              $(settings.formMessages).html(data.responseText);
           } else {
-              $(settings.formMessages).text('Oops! An error occured and your message could not be sent.');
+              $(settings.formMessages).html('Oops! An error occured and your message could not be sent.');
           }
       });
     },
