@@ -306,3 +306,8 @@ nav#tf-footer {
 		font-size: 30px;
 	}
 }
+
+.contact-me-title a {
+  color: #0375B3 !important;
+  font-size: 26px !important;
+}
